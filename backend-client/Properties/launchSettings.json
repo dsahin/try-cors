@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "backend_client": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "BackendClient",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:8083"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/BackendClient",
+      "DockerfileRunArguments": "--network=try-cors_default -v C:\\Users\\davut\\Source\\github\\dsahin\\try-cors\\certs\\rootCA.pem:/etc/ssl/certs/backendCA.pem"
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json"
+}
