@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  tls.crt: |-
+        {{ .Files.Get "certs/corsa-local.pem" | b64enc }}
+  tls.key: |-
+        {{ .Files.Get "certs/corsa-local.key" | b64enc }}
+kind: Secret
+metadata:
+  name: try-cors-frontend-cert
+type: kubernetes.io/tls

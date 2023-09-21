@@ -13,6 +13,14 @@ app.use(cookieParser());
 
 // Middleware to set CORS headers
 app.use((req, res, next) => {
+
+    const timestamp = new Date().toISOString(); 
+    const { method, url, ip, host } = req; 
+      console.log(`
+          ${timestamp} 
+          ${method} ${url} 
+          ${host}`); 
+ 
     res.header("Access-Control-Allow-Credentials", true);
     res.header("Access-Control-Allow-Origin", req.headers.origin); //'https://corsa.local'
     res.header(

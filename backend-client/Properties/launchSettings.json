@@ -14,7 +14,7 @@
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/BackendClient",
-      "DockerfileRunArguments": "--network=try-cors_default -v C:\\Users\\davut\\Source\\github\\dsahin\\try-cors\\certs\\rootCA.pem:/etc/ssl/certs/backendCA.pem"
+      "DockerfileRunArguments": "--network=try-cors_default -v C:\\Users\\davut\\Source\\github\\dsahin\\try-cors\\certs\\rootCA.pem:/etc/ssl/certs/try-cors.pem"
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json"

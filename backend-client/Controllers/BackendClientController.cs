@@ -25,7 +25,7 @@ namespace backend_client.Controllers
             };
 
             HttpClient httpClient = httpClientFactory.CreateClient();
-            response.HttpResponseMessage = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Get, "https://nginx-proxy/")
+            response.HttpResponseMessage = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Get, "https://corsb.local/")
             {
                 Headers = {
                     { HeaderNames.UserAgent, "BackendClient" },

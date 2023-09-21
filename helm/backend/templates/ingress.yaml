@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: try-cors-backend-ingress
+spec:
+  tls:
+  - hosts:
+    - corsa.local
+    secretName: try-cors-backend-cert
+  rules:
+  - host: "corsb.local"
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: try-cors-backend
+            port:
+              number: 8081              
+  ingressClassName: nginx
